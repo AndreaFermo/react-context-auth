@@ -34,15 +34,23 @@ const Home = () => {
 
   return (
     <div>
-      <div>
-        <Link
-          to="/create"
-          className="inline-block mt-4 shadow-md bg-blue-700 text-white rounded-sm px-4 py-2 font-bold hover:bg-blue-600 hover:cursor-pointer"
+      <div className="flex justify-between">
+        <div>
+          <Link
+            to="/create"
+            className="inline-block mt-4 shadow-md bg-blue-700 text-white rounded-sm px-4 py-2 font-bold hover:bg-blue-600 hover:cursor-pointer"
+          >
+            New Post
+          </Link>
+        </div>
+        <div
+          onClick={() => logout()}
+          className=" inline-block mt-4 shadow-md bg-red-700 text-white rounded-sm px-4 py-2 font-bold hover:bg-red-600 hover:cursor-pointer"
         >
-          New Post
-        </Link>
+          logout
+        </div>
       </div>
-      <div onClick={() => logout()}>logout</div>
+
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
         {isLoading ? (
           "Sto caricando i Post"
