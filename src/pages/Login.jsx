@@ -27,7 +27,7 @@ const Login = () => {
     });
     setUser(resp);
     setIsLoggedIn(true);
-    localStorage.setItem("IsLoggedIn", true);
+    localStorage.setItem("isLoggedIn", true);
     navigate("/posts");
   };
 
