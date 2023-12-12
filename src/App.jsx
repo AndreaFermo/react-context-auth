@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Show from "./pages/Show";
 import Login from "./pages/Login";
+import Registration from "./pages/Registration";
 import { AuthProvider } from "./contexts/AuthContext";
 import PrivatePages from "./middlewares/PrivatePages";
 
@@ -20,6 +21,7 @@ const App = () => {
         <AuthProvider>
           <Routes>
             <Route index element={<Login />}></Route>
+            <Route path="/register" element={<Registration />}></Route>
             <Route
               path="/posts"
               element={
